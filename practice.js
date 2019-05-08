@@ -101,7 +101,13 @@ multiply(4, 3, function(answer){
 
 //Code Here 
 function contains(array, name, callback){
-  
+  for(let i=0; i < array.length; i++){
+    if(name === array[i]){
+      callback(true)
+    }else{
+      callback(false)
+    }
+  }
 }
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -123,7 +129,17 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
-
+function uniq(array, callback){
+  for(let i = 0; i < array.length; i++){
+    for(let j= i+1; j < array.length; j++){
+      if(array[i] === array[j]){
+        array.splice(j,1)
+        j--
+      }
+    } 
+  }
+  callback(array)
+}
 // Do not edit the code below.
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
@@ -140,7 +156,11 @@ uniq(names, function(uniqArr){
 */
 
 //Code Here 
-
+function each(array, callback){
+  for(i = 0; i < array.length; i++){
+    callback(array[])
+  }
+}
 // Do not edit the code below.
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
