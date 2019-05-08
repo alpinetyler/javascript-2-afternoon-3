@@ -53,6 +53,12 @@ first(names, function(firstName){
 
 //Code Here
 
+function last(array, callback){
+  lastElement = array.length - 1
+  callback(array[lastElement])
+}
+
+
 // Do not edit the code below.
 last(names, function(lastName){
   console.log('The last name in names is ' + lastName);
@@ -70,6 +76,11 @@ last(names, function(lastName){
 */
 
 //Code Here
+function multiply(num1, num2, callback){
+  product = num1 * num2
+  callback(product)
+}
+
 
 // Do not edit the code below.
 multiply(4, 3, function(answer){
@@ -89,7 +100,9 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
-
+function contains(array, name, callback){
+  
+}
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
   if(result === true){
